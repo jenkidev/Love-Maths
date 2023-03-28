@@ -37,7 +37,15 @@ document.getElementById("answer-box").focus();
         else if (gameType === 'multiply') {
             displayMultiplicationQuestion(num1, num2);}
             else if (gameType === 'division') {
-                displayDivisionQuestion(num1, num2);}           
+                let num1 = Math.floor(Math.random() * 100) + 1;
+                let num2 = Math.floor(Math.random() * 20) + 1;
+                if (num1 > num2){
+                displayDivisionQuestion(num1, num2);
+                } else {
+                    runGame(gameType);
+                }
+            }
+
     
     else {
         alert(`Unknown Game type: ${gameType}`);
