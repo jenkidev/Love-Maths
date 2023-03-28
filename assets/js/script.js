@@ -39,7 +39,7 @@ document.getElementById("answer-box").focus();
             else if (gameType === 'division') {
                 let num1 = Math.floor(Math.random() * 100) + 1;
                 let num2 = Math.floor(Math.random() * 20) + 1;
-                if (num1 > num2){
+                if (num1 > num2 && num1 % num2 === 0){
                 displayDivisionQuestion(num1, num2);
                 } else {
                     runGame(gameType);
